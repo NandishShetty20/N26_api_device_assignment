@@ -71,3 +71,27 @@ When(/^I delete the request$/) do
   @product_response_code = response.code
   @product_parsed_json = JSON.parse(response.body)
 end
+
+Then(/^the Json reponse should have '(.*?)' entries$/) do |entries|
+  response = RestClient.get @end_point
+  @product_response_code = response.code
+  @product_parsed_json = JSON.parse(response.body)
+  json_size = JSON.parse(response.body)["data"].size
+  if json_size == entries.to_i
+    puts("The get request query executed successfully")
+  else
+    fail("The get request query executed unsuccessfully")
+  end
+end
+
+Then(/^I verify if the price of the first product is "(.*?)"$/) do |price|
+  response = RestClient.get @end_point
+  @product_response_code = response.code
+  @product_parsed_json = JSON.parse(response.body)
+  json_size = @product_parsed_json["data"].first
+  if json_size["price"] == price.to_f
+      puts("The get request query executed successfully")
+    else
+      fail("The get request query executed unsuccessfully")
+    end
+end

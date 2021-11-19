@@ -1,7 +1,6 @@
 @api
 Feature: Test RESTful API in Best Buy API playground
 
-
   Scenario: To Test creation of Products - Post Request
     Given I have a api request 'http://localhost:3030/products'
     When I create a valid json body for the post request using the below values:
@@ -51,3 +50,12 @@ Feature: Test RESTful API in Best Buy API playground
     Then I should get the response code as '200'
     And I get the request
 
+  Scenario: Get all products, limit to 20
+    Given I have a api request 'http://localhost:3030/products?$limit=20'
+    When I get the request
+    Then the Json reponse should have '20' entries
+
+  Scenario: Sort price by descending value of the price
+    Given I have a api request 'http://localhost:3030/products?$sort[price]=-1'
+    When I get the request
+    Then I verify if the price of the first product is "27999.98"
