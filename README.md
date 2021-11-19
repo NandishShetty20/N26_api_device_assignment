@@ -3,14 +3,14 @@
 This project has the tests for api and device assignment. I have used Ruby as my choice of language and used rest-client to automate API tests and aapium_lib for Android device tests.
 
 
-##Execution Machine:
+## Execution Machine:
 
 - Machine: MacBook Pro (13-inch, M1, 2020)
 - Chip Apple M1
 - OS - macOS Big Sur
 - Version 11.6
 
-##Installation and Configuration
+## Installation and Configuration
 
 1. Install RVM  ```$ \curl -sSL https://get.rvm.io | bash ``` 
 2. Install Ruby Version 2.7.2 ```$ rvm install 2.7.1 ```
@@ -23,7 +23,7 @@ This project has the tests for api and device assignment. I have used Ruby as my
 9. Run the command ```gem install bundler``` to install bundler.
 10. Go to the root folder of the project(n26_assignment) and run ```bundle install```. This should install all the required libraries for the automation project.
 
-##Test Execution##
+## Test Execution
 
 From the root folder run command ``` cucumber --profile api``` to run api tests(Make sure the api playground app is running on the local machine)
 From the root folder run command ``` cucumber --profile device``` to run device specific tests
