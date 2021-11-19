@@ -6,6 +6,8 @@
 2. To Update the created product and verifying the response code to be '200'.
 3. To check the updated product.
 4. To deletet the created product.(The test case fails as I am adding a get request for the deleted product).
+5. Get all the products but limit the entries to 20
+6. Sort the price of the products in descending value.
 
 ## Framework Architecture
 
