@@ -9,4 +9,4 @@
 
 ## Framework Architecture
 
-I have followed a very simple architecture for lack of time to finish the API tests. I have my front end cucumber code which has the data table and all the required data for a request. The code for this is written in the step definitions which converts the data table into a valid json body and executes all the requests accordingly.
+I have followed a very simple architecture for lack of time to finish the API tests. I have my front end cucumber code which has the data table and all the required data for a request. The code for the cucumber steps is written in the step definitions which converts the data table into a valid json body and executes all the requests accordingly.
