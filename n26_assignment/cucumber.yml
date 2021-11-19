@@ -1,0 +1,3 @@
+api: --tags @api -f pretty -f html -o report.html --format pretty --publish-quiet
+device: --tags '@android or not @api' -f pretty -f html -o report.html --format pretty --publish-quiet
+complete: --tags '@android or @api' -f pretty -f html -o report.html --format pretty --publish-quiet
