@@ -14,4 +14,11 @@ All the above test cases are of High Priority and have been autmated. The main p
 
 ##Framework Architecture
 
-I have used Ruby, cucumber and appium to automate the app in android device.
+I have used Ruby, cucumber and appium to automate the app in android device/emulator.I have followed a Gherkin style front end code using cucumber to write the definition of tests. I feel this is very easy to maintain and even a non technical person and write the front end code using cucumber. My project mainly contains four parts.
+
+1. Cucumber as the front end code: This is my runner code. I send most of the variables from the ferature files so that the end user is aware of what exactly is happening with the test case. I also send my locator keys form the cucuber file. If there are muliple data to be enterd in a form we can use cucumber table to send values.
+2. Step Definitions and Corresponding actions page(/lib/androiddevice/AndroidAPPActions.rb): This is where the logic for a cucumber step is coded. We can write stand alone code directly in the step definitions file or if the code is reusable then it can be written in the corresponding Actions page.
+3. Device Actions(/lib/common/deviceActions.rb): This is where the real magic happens. All the common action that happens on device like filling a textbox, clicking on button, verifying if text exists can be written here. Also this is where the locators are assigned from a yaml file.
+4. Yaml files(/lib/pagedata/android/app.yml): This is where I store all the locators in the form of a key value pair.This is loaded in the Actions page and passed onto DeviceActions.
+
+The entry point of the framework is the hooks.rb file located in /lib/systeminit. This is a configuration file which can configure the way features,scenario,steps behave. Currently I have a single configuration which take a screenshot after a Scenairo fails. I initialise the driver in systeminit.rb file located at /lib/systeminit. I have declared my browser as a global varibale so that I can access the driver from anywhere in the project.
