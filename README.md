@@ -29,7 +29,7 @@ From the root folder run command ``` cucumber --profile api``` to run api tests(
 From the root folder run command ``` cucumber --profile device``` to run device specific tests
 From the root folder run command ``` cucumber --profile complete``` to run api and device tests
 
-A report.html file is generated after the execution to know the execution details. Also a .png file get created with the screenshot of the device whenever the device tests fail.More details regarding the device tests can be found in Device_Tests.md file. Similarly more details of the api tests are in API_Tests.md in the root folder of the project.
+A report.html file is generated after the execution to know the execution details. Also a .png file get created with the screenshot of the device whenever the device tests fail.More details regarding the device tests can be found in Device_Tests.md file. Similarly more details of the api tests are in API_Tests.md in the root folder of the project.I have uploaded a video of the device test case execution on youtube just for reference. This is the link 'https://www.youtube.com/watch?v=TUCZiJx4ruc'
 
 
 
