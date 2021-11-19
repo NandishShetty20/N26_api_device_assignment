@@ -25,6 +25,9 @@ This project has the tests for api and device assignment. I have used Ruby as my
 
 ## Test Execution
 
+Before the execution of device test cases, we need to change the deviceName value in lib/systeminit/systeminit.rb file. To get the device name we need to have the emulator running using AVD manager. Run ```adb devices``` command in the terminal and get the devicename. In case of a real device USB debugging should be enabled and the device must be connect to the execution machine. Run the same command as mentioned and update the devicename in the .rb file.
+
+
 From the root folder run command ``` cucumber --profile api``` to run api tests(Make sure the api playground app is running on the local machine)
 From the root folder run command ``` cucumber --profile device``` to run device specific tests
 From the root folder run command ``` cucumber --profile complete``` to run api and device tests
