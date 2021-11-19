@@ -12,8 +12,7 @@
 
 All the above test cases are of High Priority and have been autmated. The main problem that I faced during automation was identifying the elements as many of the elements do not have a proper ID. I have user xpath with TextView at most places.
 
-##Framework Architecture
-
+## Framework Architecture
 I have used Ruby, cucumber and appium to automate the app in android device/emulator.I have followed a Gherkin style front end code using cucumber to write the definition of tests. I feel this is very easy to maintain and even a non technical person and write the front end code using cucumber. My project mainly contains four parts.
 
 1. Cucumber as the front end code: This is my runner code. I send most of the variables from the ferature files so that the end user is aware of what exactly is happening with the test case. I also send my locator keys form the cucuber file. If there are muliple data to be enterd in a form we can use cucumber table to send values.
